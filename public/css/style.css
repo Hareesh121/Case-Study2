@@ -1,0 +1,198 @@
+body
+{ 
+    background-image: url(../images/blur3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+ position: relative;
+ min-height: 100vh;
+ padding-bottom: 250px;
+    
+}
+
+
+
+.lib h1
+{
+    font-size: 30px;
+font-weight: bolder;
+text-align: center;
+color: azure;
+}
+
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link:hover
+{
+    color: rgb(94, 255, 20);
+}
+
+.msg
+{
+    color: rgb(55, 252, 6);
+    text-decoration: none;
+}
+
+.message
+{
+color: chartreuse;
+}
+
+.lib h1
+{
+    text-decoration: underline;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.lib1 h1
+{
+    text-decoration: underline;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.card .img-fluid
+{
+    height: 350px;
+    width: 400px;
+}
+
+.card{
+    margin-top: 60px;
+    margin-bottom: 30px;
+    height: 525px;
+    /* width: 300px; */
+}
+
+
+ul{
+list-style: none;
+color: #fff;
+font-size: 15px;
+letter-spacing: 1px;
+}
+
+ul a{
+    text-decoration: none;
+    outline: none;
+    color:#fff ;
+    transition: 0.2s;
+}
+ul a:hover
+{
+    color:rgb(94, 255, 20)
+}
+
+
+
+
+.max
+{
+    background-color: rgb(68, 67, 67)
+}
+
+.mac
+{
+    color: azure;
+  text-align: center;
+    
+   
+}
+.maz
+{
+    color: azure;
+    text-align: justify;
+   
+}
+.mav
+{
+    background-color: #3d545f;
+    color: azure;
+}
+.fi
+{
+    padding-top: 50px;
+}
+.bg
+{   padding: 30px 30px 30px 30px;
+    background-color: rgba(56, 58, 41, 0.418);
+    box-shadow: 0px 0px 10px 10px rgb(0, 0, 0);
+}
+
+.lg
+{
+    background-color: rgba(75, 68, 30, 0.699);
+    box-shadow: 0px 0px 10px 10px rgb(0, 0, 0);
+}
+
+
+.cg
+{
+padding: 25px 0px 0px 0px;
+margin-bottom: 30px;
+
+}
+
+.desc
+{
+    background-color: rgba(211, 110, 97, 0.103);
+}
+.description h1 {
+        text-shadow: 0 1px 0 rgb(150, 78, 78),
+                     0 2px 0 #812929,
+                     0 3px 0 rgb(105, 38, 38),
+                     0 4px 0 #742121,
+                     0 5px 0 rgb(97, 69, 69),
+                     0 6px 1px rgba(0,0,0,.1),
+                     0 0 5px rgba(0,0,0,.1),
+                     0 1px 3px rgba(0,0,0,.3),
+                     0 3px 5px rgba(0,0,0,.2),
+                     0 5px 10px rgba(0,0,0,.25),
+                     0 10px 10px rgba(0,0,0,.2),
+                     0 20px 20px rgba(0,0,0,.15);
+                     font-size: xx-large;
+      }
+      
+
+
+#message {
+    width: 360px;
+    height: 200px;
+    display:none;
+    
+    color: rgb(255, 255, 255);
+    position: absolute;
+    padding: 5px;
+    margin-top: 2px;
+    background-attachment: fixed;
+
+    background-color: rgba(0, 0, 0, 0.894);
+    box-shadow: 0px 0px 1px 1px rgb(2, 85, 2);
+  }
+  
+  #message p {
+    font-family:   'Lobster', helvetica, arial;
+    padding-top: 2px;
+    
+    padding: 2px 5px;
+    
+  }
+  
+  #message h3
+  {
+    font-family: 'Lobster', helvetica, arial;
+    color: chartreuse;
+    
+      font-size: 15px;
+  }
+
+  #message b
+  {
+   font-size: large;
+   color: chartreuse;
+  }
+
+
+
+.hi{
+    height: 50px;
+    width: 500px;
+}

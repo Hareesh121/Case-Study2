@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" >
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+    <link rel="icon" href="../images/logo2.png">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand">LIBRARY</a>
+        <img src="../images/logo2.png" width="30" height="30" alt="">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav">
+            <% for(i=0;i<nav.length;i++){%>
+              <li class="nav-item active">
+    
+                <a class="nav-link" href="<%=nav[i].link%>"><%=nav[i].name%></a>
+              </li>
+              <% } %>
+            
+          </ul>
+          
+        </div>
+        
+      </nav>
+           
+          <div class="container cg">
+            <div class="row cg" style="height: 40px;"></div>
+            <div class="row cg">
+                <div class="col-md-4"></div>
+                <div class="col-md-4 lg" style="color: azure;">
+                  <form method="POST" action="/Signup/hi"   onsubmit="return validate()">
+                    <h1 style="text-align: center; padding:5px;font-weight: bolder;text-decoration: underline;font-family: Arial, Helvetica, sans-serif;font-size: xx-large;">SIGN UP</h1>
+                    
+                    <form>
+                        <div class="form-row">
+                          <div class="form-group col">
+                            <label for ="Name"><span id= "name1" class="text-danger"></span></label>
+                            <input type="text" class="form-control" id ="fname" placeholder="First name" name="firstname">
+                          </div>
+                          <div class="form-group col">
+                            <label for ="name2"><span id= "nam2" class="text-danger"></span></label>
+                            <input type="text" class="form-control" id="lname" placeholder="Last name"name="lastname">
+                          </div>
+                        </div>
+
+                        <div class="form-group">
+                          <label for="UserName" ><span id="uname" class="text-danger"></span></label>
+                          <input type="text" class="form-control" id="Uname" placeholder="Username" name="username">
+                          
+                        </div>
+
+                        
+                        <div class="form-group">
+                          <label for="inputEmail"><span id="mail" class="text-danger"></span></label>
+                            <input type="email" class="form-control"id="email" placeholder="Email address"name="email">
+                        </div>
+
+                        <div class="form-group">
+                          <label for="phonenumber" class="text-danger"></span></label>
+                            <input type="text" class="form-control"  id= "phno" placeholder="Phonenumber"name="phonenumber">
+                        
+                          </div>
+                       
+
+
+
+
+                        <div class="form-group">
+                          <label for="InputPassword1"><span id="pass1" class="text-danger"></span></label>
+                            <input type="password" class="form-control"id="password" placeholder="Password" name="password">
+                            
+                       
+                        
+                        
+                        <div class="progress" id="prog" style=" height: 5px; margin-top: 4px;">
+                          <div class="progress-bar" id="strength" role="progressbar"style="width: 0px; height: 5px;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        
+                        <div id="message">
+                          <h3>Password must contain the following:</h3>
+                          <p id="letter" ><b>*</b>A lowercase letter</p>
+                          <p id="capital"><b>*</b>A capital (uppercase) letter</p>
+                          <p id="number" ><b>*</b>A number</p>
+                          <p id="length"><b>*</b>Minimum 8 characters</p>
+                        </div>
+                        
+                      </div>
+
+                        <div class="form-group">
+                             <label for="confirmPassword"><span id="pass2" class="text-danger"></span></label>
+                            <input type="password" class="form-control" id="confpass"placeholder="Confirm password" name="confirmpassword">
+                        </div>
+    
+                        <div class="form-group">
+                          <div class="form-check">
+
+                          </div>
+                        </div>
+
+                     
+            <button type="submit" class="btn btn-primary btn-block">Sign Up</button>
+                        <p class="msg">Already Signed Up ? <a href="/Login">Login Here</a></p>
+                      </form>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+        
+        <footer class="page-footer font-small blue pt-4 max" style="position: absolute;bottom: 0;">
+          <div class="container-fluid text-center text-md-left">
+        
+      
+            <div class="row">
+             <div class="col-md-4 maz">
+             <h5 class="text-uppercase"  style="text-decoration: underline;">LIBRARY</h5>
+                <p> A curated collection of sources of information and similar resources, selected by experts and made accessible to a defined community for reference or borrowing, often in a quiet environment conducive to study.</p>
+        
+              </div>
+            <hr class="clearfix w-100 d-md-none pb-3">
+        
+         
+              <div class="col-md-4 mac">
+        
+            
+                <h5 class="text-uppercase"  style="text-decoration: underline;">QUICK LINKS</h5>
+        
+                <ul class="list-unstyled">
+                  <li>
+                    <a href="/">Home</a>
+                  </li>
+                  <!-- <li>
+                    <a href="/Books">Books</a>
+                  </li>
+                  <li>
+                    <a href="/Authors">Authors</a>
+                  </li> -->
+                  <li>
+                    <a href="/Login">Login</a>
+                  </li>
+                  <li>
+                    <a href="/Signup">SignUp</a>
+                  </li>
+                </ul>
+        
+              </div>
+        
+        
+        
+        
+              <div class="col-md-4  maz">
+        
+                <h5 class="text-uppercase" style="text-decoration: underline;">CONTACT</h5>
+        
+                <ul class="list-unstyled">
+                  <li> 
+                    <i class="fa fa-map-marker" aria-hidden="true"></i> 121,XYZ street,Trivandrum
+                  </li>
+                  <li> 
+                    <i class="fa fa-phone" aria-hidden="true"></i> 006-126-456-12
+                  </li>
+                  <li> 
+                    <i class="fa fa-envelope" aria-hidden="true"></i> support@librarymanagement.com
+                  </li>
+                </ul>
+                <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                      <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                          <a href=""><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+        
+              </div>
+           
+            </div>
+        
+          </div>
+          <div class="footer-copyright text-center py-3 mav">Copyright © Library Management 2020. All rights reserved
+         
+        
+          </div>
+         
+        
+        </footer>
+        
+
+
+
+
+        <script src="/js/Sign up.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+
+      </body>
+</html>

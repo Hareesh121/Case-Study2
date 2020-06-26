@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUTHORS</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" >
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" > -->
+    <link rel="icon" href="../images/logo2.png">
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      
+        <a class="navbar-brand">LIBRARY</a>
+        <img src="../images/logo2.png" width="30" height="30" alt="">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav">
+            <% for(i=0;i<navNew.length;i++){%>
+              <li class="nav-item active">
+    
+                <a class="nav-link" href="<%=navNew[i].link%>"><%=navNew[i].name%></a>
+              </li>
+              <% } %>
+            
+          </ul>
+            </div>
+          </nav>
+
+
+          <div class="container " style="width: max-content;">
+          <div class="row "style="height:50px"></div>
+<h1 style=" text-align: center; color: rgb(226, 226, 226);font-family: fantasy;text-decoration: underline;font-size: 80px;">
+AUTHOR
+</h1>
+
+
+  <div class="card mb-3" style="height: 430px;width: 650px; background-color: darkgrey;" >
+    
+            <form method="POST" action="/authors/author/update">
+
+                  <h1 style="color: rgb(0, 0, 0);font-weight: bolder;text-decoration: underline;font-family: fantasy;text-align: center;font-size: xx-large;">EDIT AUTHOR</h1>
+
+                    <input type="hidden" value="<%=author._id%>" name="id"><br>
+                    <div class="form-group"style="width: 200px;margin-left: 20px;">
+                        <label for="author"style="color: blue;"><span id="mail" class="text-danger"></span>Author:</label>
+                      <input type="text" class="form-control" id="pwd"value="<%=author.author%>" name="author" >
+                    </div>
+
+                  <div class="form-group" style="width: 200px;margin-left: 20px;">
+                        <label for="genre" style="color: blue;"><span id="mail" class="text-danger"></span>Genre:</label>
+                      <input type="text" id="email" class="form-control" value="<%=author.genre%>" name="genre"  >
+                    </div>
+                    <div class="form-group"style="width: 600px;margin-left: 20px;">
+                        <label for="description"style="color:blue;"><span id="mail" class="text-danger"></span>Description:</label>
+                        <input type="text" class="form-control" id="pwd"value="<%=author.description%>" name="description" >
+                      </div>
+                     
+                  
+                    
+
+    <button type="submit" style="width: 100px; margin-left: 500px;">Update</button>
+        </form><br>
+        
+        
+        <form action="/authors/delete/<%=author._id%>">
+            <input type="hidden" value="<%=author._id%>" name="id">
+        <button type="submit"style="width: 100px;margin-left: 500px; ">Delete</button>
+        </form>
+  
+  
+  
+    </div>
+  
+  </div>
+          </div>
+  
+     
+  
+  
+
+          <footer class="page-footer  font-small blue pt-4 max">
+    <div class="container-fluid text-center text-md-left">
+  
+
+      <div class="row">
+       <div class="col-md-4 maz">
+       <h5 class="text-uppercase"  style="text-decoration: underline;">LIBRARY</h5>
+          <p> A curated collection of sources of information and similar resources, selected by experts and made accessible to a defined community for reference or borrowing, often in a quiet environment conducive to study.</p>
+  
+        </div>
+      <hr class="clearfix w-100 d-md-none pb-3">
+  
+   
+        <div class="col-md-4 mac">
+  
+      
+          <h5 class="text-uppercase"  style="text-decoration: underline;">QUICK LINKS</h5>
+  
+          <ul class="list-unstyled">
+            <li>
+              <a href="/index">Home</a>
+            </li>
+            <li>
+              <a href="/Books">Books</a>
+            </li>
+            <li>
+              <a href="/Authors">Authors</a>
+            </li>
+            <!-- <li>
+              <a href="/Login">Login</a>
+            </li>
+            <li>
+              <a href="/Signup">SignUp</a>
+            </li> -->
+          </ul>
+  
+        </div>
+  
+  
+  
+  
+        <div class="col-md-4  maz">
+  
+          <h5 class="text-uppercase" style="text-decoration: underline;">CONTACT</h5>
+  
+          <ul class="list-unstyled">
+            <li> 
+              <i class="fa fa-map-marker" aria-hidden="true"></i> 121,XYZ street,Trivandrum
+            </li>
+            <li> 
+              <i class="fa fa-phone" aria-hidden="true"></i> 006-126-456-12
+            </li>
+            <li> 
+              <i class="fa fa-envelope" aria-hidden="true"></i> support@librarymanagement.com
+            </li>
+          </ul>
+          <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                  <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    <a href=""><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+  
+        </div>
+     
+      </div>
+  
+    </div>
+    <div class="footer-copyright text-center py-3 mav">Copyright © Library Management 2020. All rights reserved
+   
+  
+    </div>
+   
+  
+  </footer>
+  
+
+
+
+
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>
